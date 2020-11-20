@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  background: #40e0d0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff0080,
+    #ff8c00,
+    #40e0d0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff0080,
+    #ff8c00,
+    #40e0d0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 30px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+  color: white;
+}
+.containerList {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+#names {
+  display: flex;
+  flex-direction: column;
+}
+#logo {
+  display: flex;
+  flex-direction: column;
+}
+.author {
+  font-family: "Pacifico", cursive;
+  color: white;
+  margin-left: 50px;
+}
+.author-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 100px;
+}

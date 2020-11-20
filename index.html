@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <title>Git</title>
+  </head>
+  <body>
+    <div class="container">
+      <p class="title">Curso Git</p>
+    </div>
+    <div class="containerList" id="names"></div>
+    <div class="author-container">
+      <p class="author">Ing. Jesús Guzmán</p>
+    </div>
+    <script>
+      const alumnos = [];
+      const renderData = (name, gender) => {
+        if (gender === "Male") {
+          return `
+          <div 
+            style="display:flex; 
+            align-items: center; 
+            justify-content: center; 
+            justify-content: space-evenly; 
+            width: 100%;
+            margin-bottom: 25px;"
+          >
+            <p style="margin: 0; width: 150px;">${name}</p>
+            <img src="./images/Male.png" width="60px" height="60px" alt="male"/>
+          </div>
+         `;
+        } else {
+          return `
+          <div 
+            style="display:flex; 
+            align-items: center; 
+            justify-content: center; 
+            justify-content: space-evenly; 
+            width: 100%;
+            margin-bottom: 25px;"
+          >
+            <p style="margin: 0; width: 150px;">${name}</p>
+            <img src="./images/Female.png" width="60px" height="60px" alt="female"/>
+          </div>
+         `;
+        }
+      };
+      if (alumnos.length > 0) {
+        alumnos.map((alumno) => {
+        const { name, gender } = alumno;
+        const renderGender = renderData(name, gender);
+        document
+          .querySelector("#names")
+          .insertAdjacentHTML("beforeend", `${renderGender}`);
+      });  
+      } else {
+        document
+          .querySelector("#names")
+          .insertAdjacentHTML("beforeend", "<p>Aun no hay nombres .....</p>");
+      }
+    </script>
+  </body>
+</html>
