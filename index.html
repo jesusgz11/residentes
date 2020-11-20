@@ -21,7 +21,16 @@
       <p class="author">Ing. Jesús Guzmán</p>
     </div>
     <script>
-      const alumnos = [];
+      const alumnos = [
+        {
+          name: "Jesus",
+          gender: "Male"
+        },
+        {
+          name: "Annie",
+          gender: "Female"
+        }
+      ];
       const renderData = (name, gender) => {
         if (gender === "Male") {
           return `
